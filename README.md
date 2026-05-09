@@ -36,9 +36,22 @@ pip install matplotlib numpy
 
 ### 3. Run the Optimization
 ```bash
-python load_optimizer.py
+python main.py
 ```
 This will run the algorithm using the hardcoded test boxes and container dimensions. Once finished, a Matplotlib window will open showing a 3D visualization of the optimal packing layout!
+
+## 📁 Project Structure
+```
+Load-Optimiser/
+├── main.py          # Entry point — run this to execute the optimizer
+├── config.py        # Truck dimensions & box generation (input data)
+├── models.py        # Data structures (Box, SkylineSegment)
+├── skyline.py       # Skyline merge & update logic
+├── optimizer.py     # Core wall-building packing algorithm
+├── visualizer.py    # 3D Matplotlib rendering
+├── .gitignore
+└── README.md
+```
 
 ## 🧠 How The Algorithm Works
 The core logic implements a greedy Skyline Wall-Building Strategy:
